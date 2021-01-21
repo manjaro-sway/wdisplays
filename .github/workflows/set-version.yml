@@ -18,10 +18,10 @@ jobs:
         name: update pkgbuild
         env:
           VERSION: ${{ github.event.client_payload.version }}
-          MD5: ${{ github.event.client_payload.md5 }}
         run: |
           sed -i "/pkgver=/c\pkgver=${VERSION}" PKGBUILD
-          sed -i "/_release_md5=/c\release_md5=${MD5}" PKGBUILD
+          MD5LINE=$(makepkg -g)
+          sed -i "/md5sums=/c\${MD5LINE}" PKGBUILD
       - 
         name: commit
         run: |
