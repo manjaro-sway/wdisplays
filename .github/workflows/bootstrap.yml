@@ -5,16 +5,15 @@ on:
     - cron:  '0 1-23/2 * * *'
 
 jobs:
-  botstrap_actions:
+  bootstrap_actions:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
-      - 
-        name: checkout
-        uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
         with:
-          token: ${{ secrets.BOOTSTRAP_WORKFLOWS }}
-      - 
-        id: bootstrap
-        uses: Manjaro-Sway/bootstrap-package-actions@master
+          token: ${{ secrets.BOOTSTRAP_WORKFLOWS || github.token }}
+      - id: bootstrap
+        uses: manjaro-contrib/action-bootstrap-actions@main
         with:
-          upstream: "https://aur.archlinux.org/wdisplays.git"
+          upstream: https://aur.archlinux.org/wdisplays.git
