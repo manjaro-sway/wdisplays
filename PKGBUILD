@@ -4,7 +4,7 @@
 
 pkgname=wdisplays
 pkgver=1.1.1
-pkgrel=2
+pkgrel=3
 pkgdesc="GUI display configurator for wlroots compositors"
 url="https://github.com/artizirk/wdisplays"
 license=(GPL3)
