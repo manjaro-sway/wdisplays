@@ -33,7 +33,7 @@ jobs:
                 git push
             fi
       - name: dispatch
-        uses: peter-evans/repository-dispatch@26b39ed245ab8f31526069329e112ab2fb224588 # v2
+        uses: peter-evans/repository-dispatch@bf47d102fdb849e755b0b0023ea3e81a44b6f570 # v2
         with:
             token: ${{ secrets.DISPATCH_TOKEN || github.token }}
             repository: ${{ github.repository }}
