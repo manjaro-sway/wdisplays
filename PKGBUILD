@@ -3,7 +3,7 @@
 # Contributor: Stefan Tatschner <stefan@rumpelsepp.org>
 
 pkgname=wdisplays
-pkgver=1.1.1
+pkgver=1.1.2
 pkgrel=1
 pkgdesc="GUI display configurator for wlroots compositors"
 url="https://github.com/artizirk/wdisplays"
@@ -21,12 +21,8 @@ makedepends=(
 source=(
   $pkgname-$pkgver.tar.gz::$url/archive/$pkgver.tar.gz
 )
-sha512sums=(
-  '46923592e9fbb5c06c3549c198aedbafd8e0b5a6a82bc11d9d0b4cb0860070000cce18e0aa109932a4e4bee34d9f235660d2ea9d485a8fce146a2755ef62f81d'
-)
-b2sums=(
-  'a294719c3b8e91642d53e22aaac40c3ddd9a24e2eaef8e8b412905e9a4ef4be7984c0d0c087661d975ec518304020d1f84fc7a6ac4f62f1a5708c73878646818'
-)
+sha512sums=('cac7b9462f77ef448d9dfb47ce81b07b561cee64abaa667bd71d29632d92c82b3519125f14696c2fdf70ef247bd6e08e8f33d25c9794cf9cad6b6c8d4a202600')
+b2sums=('eae2686e65b0f9ba2e91139804b131d367394fb3eae8506ee82d467b5b4daf87fba756bc7def51c0bbc0d796407b742241722897baf8072ed69d833701d19f1c')
 
 build() {
   cd "$pkgname-$pkgver"
