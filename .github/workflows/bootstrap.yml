@@ -14,6 +14,6 @@ jobs:
         with:
           token: ${{ secrets.BOOTSTRAP_WORKFLOWS || github.token }}
       - id: bootstrap
-        uses: manjaro-contrib/action-bootstrap-actions@5f1c7e2a194e73b574897ba0af338176c85617f4 # main
+        uses: manjaro-contrib/action-bootstrap-actions@771c9268a0996b4b423564da47c4af84504a3346 # main
         with:
           upstream: https://aur.archlinux.org/wdisplays.git
